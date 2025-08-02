@@ -2,7 +2,6 @@ import torch
 import torch.nn as nn
 import math
 
-
 class LayerNormalization(nn.Module):
 
     def __init__(self, features: int, eps:float=10**-6) -> None:
@@ -266,3 +265,4 @@ def build_transformer(src_vocab_size: int, tgt_vocab_size: int, src_seq_len: int
             nn.init.xavier_uniform_(p)
     
     return transformer
+
